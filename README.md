@@ -11,6 +11,8 @@ Développer progressivement un véhicule capable de transporter du petit matéri
 
 ### Réalisé / testé
 
+Les sources retrouvées de cette phase sont disponibles dans [`initial-line-following-prototype/`](initial-line-following-prototype/).
+
 - première phase de déplacement et **suivi de ligne** ;
 - essai d'une caméra pour cette première approche ;
 - définition de la plateforme matérielle et sélection des composants pour la suite du projet.
@@ -68,7 +70,7 @@ Ce schéma représente l'**architecture visée**, pas l'état fonctionnel actuel
 
 Projet pédagogique réalisé en groupe et planifié de mars 2026 à juin 2028. Le dépôt documente l'évolution du système sans attribuer à une seule personne le travail collectif.
 
-À ce stade, le dépôt est principalement documentaire : le code des futures fonctions de navigation n'y est pas présenté comme disponible.
+Le dépôt contient maintenant le code récupéré du prototype initial de suivi de ligne. Le code des futures fonctions de navigation n'y est pas présenté comme disponible.
 
 ---
 
@@ -78,7 +80,7 @@ Multi-year team project at Télécom Saint-Étienne (2026–2028) — **work in 
 
 ### Implemented / tested
 
-Early vehicle-motion and line-following work, including an initial camera experiment, plus selection of the hardware platform for the next phase.
+Early vehicle-motion and line-following work, including an initial camera experiment, plus selection of the hardware platform for the next phase. The recovered prototype source is available in [`initial-line-following-prototype/`](initial-line-following-prototype/).
 
 ### In progress
 
