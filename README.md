@@ -92,4 +92,4 @@ Full mapping/localization, autonomous navigation, obstacle avoidance, person-fol
 
 **Target hardware:** Raspberry Pi · Baron ROB0025 chassis · 2× Cytron MDD3A · LD19 LiDAR · BMI323 IMU
 
-This repository currently focuses on project documentation and roadmap clarity rather than claiming unavailable navigation source code.
+The repository now includes the recovered initial line-following prototype while keeping future navigation features clearly identified as roadmap work.
