@@ -66,6 +66,8 @@ Le projet est réalisé en groupe et s'étend de mars 2026 à juin 2028. Ce dép
 
 ## État du dépôt
 
+**Work in progress / Projet en cours.**
+
 Le projet est **en cours de développement**. Ce README distingue volontairement les éléments testés/choisis des fonctionnalités prévues afin de ne pas présenter la roadmap comme un résultat déjà obtenu.
 
 ---
