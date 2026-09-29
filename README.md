@@ -1,15 +1,46 @@
 # Véhicule autonome de service
 
-> Projet pluriannuel mené en équipe à Télécom Saint-Étienne (2026–2028).  
+> Projet pluriannuel en équipe à Télécom Saint-Étienne (2026–2028) — **Work in progress**.  
 > **English version below.**
 
 ## 🇫🇷 Objectif
 
-Développer un véhicule autonome capable de transporter du petit matériel entre différentes salles d'un établissement, avec navigation autonome et prise en compte des obstacles.
+Développer progressivement un véhicule capable de transporter du petit matériel entre différentes salles. Le projet combine Raspberry Pi, motorisation, encodeurs et capteurs ; les fonctions d'autonomie avancées appartiennent aux phases suivantes du projet.
 
-Le projet associe informatique, électronique, capteurs et robotique embarquée. Il est développé progressivement sur plusieurs années : les fonctions décrites comme perspectives ne sont pas présentées comme déjà implémentées.
+## État actuel
 
-## Principe
+### Réalisé / testé
+
+- première phase de déplacement et **suivi de ligne** ;
+- essai d'une caméra pour cette première approche ;
+- définition de la plateforme matérielle et sélection des composants pour la suite du projet.
+
+### En développement
+
+- intégration de la nouvelle plateforme Raspberry Pi ;
+- exploitation des encodeurs, du LiDAR LD19 et de l'IMU BMI323 ;
+- préparation des briques nécessaires à la localisation/cartographie.
+
+### Prévu
+
+Les éléments suivants sont des **objectifs de roadmap et ne sont pas présentés comme fonctionnels aujourd'hui** :
+- cartographie et localisation complètes ;
+- navigation autonome et évitement d'obstacles ;
+- suivi de personne comme scénario expérimental ;
+- mode manuel avec visualisation de l'état du robot ;
+- collecte de métriques et supervision ;
+- application de commande et supervision web.
+
+## Plateforme matérielle retenue
+
+- Raspberry Pi ;
+- châssis 4 roues Baron ROB0025 avec moteurs et encodeurs ;
+- 2 × drivers moteurs Cytron MDD3A ;
+- LiDAR LD19 ;
+- IMU DFRobot Fermion BMI323 ;
+- écran et périphériques Raspberry Pi.
+
+## Architecture cible
 
 ```text
 Commande / destination
@@ -25,61 +56,38 @@ LiDAR      + encodeurs
 IMU
         │
         ▼
-Perception → localisation/cartographie
+Localisation / cartographie
         │
         ▼
-Planification / déplacement
+Navigation / déplacement
 ```
 
-## Matériel retenu pour la plateforme actuelle
+Ce schéma représente l'**architecture visée**, pas l'état fonctionnel actuel.
 
-- Raspberry Pi ;
-- châssis 4 roues Baron ROB0025 avec moteurs/encodeurs ;
-- 2 × drivers moteurs Cytron MDD3A ;
-- LiDAR LD19 ;
-- IMU DFRobot Fermion BMI323 ;
-- écran et périphériques Raspberry Pi.
+## Contexte
 
-## Développement par étapes
+Projet pédagogique réalisé en groupe et planifié de mars 2026 à juin 2028. Le dépôt documente l'évolution du système sans attribuer à une seule personne le travail collectif.
 
-### Première phase
-
-Les premiers travaux ont porté sur le déplacement du véhicule et le suivi de ligne. Une caméra a été testée, mais son utilisation s'est révélée plus complexe et moins prioritaire que les besoins de navigation/localisation.
-
-### Phase actuelle
-
-L'orientation actuelle privilégie :
-- cartographie de l'environnement ;
-- localisation/navigation avec LiDAR ;
-- suivi d'une personne comme cas de test ;
-- supervision du robot ;
-- mode manuel encadré par des prérequis de sécurité et une visualisation de l'état du véhicule ;
-- collecte de métriques.
-
-### Perspectives
-
-À terme, le projet vise une chaîne plus complète avec commande depuis une application, choix de destination, planification de trajet, évitement d'obstacles et supervision web.
-
-## Contexte équipe
-
-Le projet est réalisé en groupe et s'étend de mars 2026 à juin 2028. Ce dépôt documente donc le système et son évolution sans attribuer à une seule personne le travail collectif.
-
-## État du dépôt
-
-**Work in progress / Projet en cours.**
-
-Le projet est **en cours de développement**. Ce README distingue volontairement les éléments testés/choisis des fonctionnalités prévues afin de ne pas présenter la roadmap comme un résultat déjà obtenu.
+À ce stade, le dépôt est principalement documentaire : le code des futures fonctions de navigation n'y est pas présenté comme disponible.
 
 ---
 
 # 🇬🇧 Autonomous Service Vehicle
 
-Multi-year team project at Télécom Saint-Étienne (2026–2028) focused on building an autonomous vehicle for transporting small equipment between rooms.
+Multi-year team project at Télécom Saint-Étienne (2026–2028) — **work in progress**.
 
-The platform combines a Raspberry Pi, four-wheel chassis with encoders, Cytron motor drivers, an LD19 LiDAR and a BMI323 IMU.
+### Implemented / tested
 
-Development is incremental. Early work focused on vehicle motion and line following. The current direction prioritizes LiDAR-based mapping/navigation, person-following experiments, supervision and system metrics.
+Early vehicle-motion and line-following work, including an initial camera experiment, plus selection of the hardware platform for the next phase.
 
-Future work includes destination requests through an application, path planning, obstacle avoidance and web-based supervision.
+### In progress
 
-This is a **work in progress**. Planned features are deliberately separated from implemented/tested elements.
+Integration of the Raspberry Pi platform, motor encoders, LD19 LiDAR and BMI323 IMU, and preparation of the building blocks required for localization and mapping.
+
+### Planned
+
+Full mapping/localization, autonomous navigation, obstacle avoidance, person-following experiments, manual supervision, metrics and a web control interface are **roadmap items, not completed features**.
+
+**Target hardware:** Raspberry Pi · Baron ROB0025 chassis · 2× Cytron MDD3A · LD19 LiDAR · BMI323 IMU
+
+This repository currently focuses on project documentation and roadmap clarity rather than claiming unavailable navigation source code.
